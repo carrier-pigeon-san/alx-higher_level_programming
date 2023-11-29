@@ -6,4 +6,3 @@ def print_last_digit(number):
         mod = number % 10
     print("{}".format(mod), end="")
     return mod
-
