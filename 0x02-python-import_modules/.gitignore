@@ -1,6 +1,7 @@
 # Files to be ignored
 add_0.py
 0-import_add.py
+calculator_1.py
 
 # Folders to be ignored
 __pycache__/
