@@ -1,2 +1,4 @@
 # Files to be ignored
 main.py
+_main.c
+list_fcnts.c
