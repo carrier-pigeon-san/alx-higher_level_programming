@@ -57,7 +57,6 @@ class SinglyLinkedList:
             this_node.next_node = node
 
     def __repr__(self):
-        """represents class' objects as strings to be printable"""
         node = self.__head
         node_list = []
         while node:
