@@ -8,12 +8,28 @@ class Square:
     that is a required integer greater than or equal to zero
     """
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         self.size = size
+        self.position = position
+
+    @property
+    def position(self):
+        return self.__position
 
     @property
     def size(self):
         return self.__size
+
+    @position.setter
+    def position(self, value):
+        if type(value) is not tuple or len(value) != 2:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        a, b = value
+        if type(a) is not int or type(b) is not int:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        if a < 0 or b < 0:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        self.__position = value
 
     @size.setter
     def size(self, value):
@@ -31,6 +47,8 @@ class Square:
             print()
         else:
             for m in range(self.__size):
+                for p in range(self.__position[0]):
+                    print(" ", end="")
                 for n in range(self.__size):
                     print("#", end="")
                 print()
