@@ -10,20 +10,24 @@ class Node:
 
     @property
     def data(self):
+        """attribute property for getting attribute data"""
         return self.__data
 
     @data.setter
     def data(self, value):
+        """validate attribute is integer"""
         if type(value) is not int:
             raise TypeError('data must be an integer')
         self.__data = value
 
     @property
     def next_node(self):
+        """next_node attribute property to get attribute"""
         return self.__next_node
 
     @next_node.setter
     def next_node(self, value):
+        """validate attribute is object of Node class"""
         if value is not None:
             if not isinstance(value, Node):
                 raise TypeError('next_node must be a node object')
@@ -39,6 +43,7 @@ class SinglyLinkedList:
         self.__head = None
 
     def sorted_insert(self, value):
+        """inserts node in order of increaseing data value """
         node = Node(value, None)
         if self.__head is None or value <= self.__head.data:
             node.next_node = self.__head
@@ -52,6 +57,7 @@ class SinglyLinkedList:
             this_node.next_node = node
 
     def __repr__(self):
+        """represents class' objects as strings to be printable"""
         node = self.__head
         node_list = []
         while node:
