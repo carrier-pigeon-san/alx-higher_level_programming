@@ -29,6 +29,7 @@ class Node:
                 raise TypeError('next_node must be a node object')
         self.__next_node = value
 
+
 class SinglyLinkedList:
     """
     defines a singly linked list
@@ -43,8 +44,9 @@ class SinglyLinkedList:
             node.next_node = self.__head
             self.__head = node
         else:
-            this_node = self.__head;
-            while (this_node.next_node is not None and value > this_node.next_node.data):
+            this_node = self.__head
+            while (this_node.next_node is not None and
+                    value > this_node.next_node.data):
                 this_node = this_node.next_node
             node.next_node = this_node.next_node
             this_node.next_node = node
