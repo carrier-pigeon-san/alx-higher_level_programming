@@ -1,10 +1,15 @@
 #!/usr/bin/python3
+"""defines classes Node and SiinglyLinkedList"""
+
+
 class Node:
     """
     defines a node of a singly linked list
     """
 
     def __init__(self, data, next_node=None):
+        """instantiation of Node class with data and next_node"""
+
         self.data = data
         self.next_node = next_node
 
@@ -40,6 +45,7 @@ class SinglyLinkedList:
     """
 
     def __init__(self):
+        """instantiation of class with head"""
         self.__head = None
 
     def sorted_insert(self, value):
@@ -57,6 +63,7 @@ class SinglyLinkedList:
             this_node.next_node = node
 
     def __repr__(self):
+        """represents class objects as strings to be printable"""
         node = self.__head
         node_list = []
         while node:
