@@ -35,7 +35,7 @@ class Node:
         """validate attribute is object of Node class"""
         if value is not None:
             if not isinstance(value, Node):
-                raise TypeError('next_node must be a node object')
+                raise TypeError('next_node must be a Node object')
         self.__next_node = value
 
 
