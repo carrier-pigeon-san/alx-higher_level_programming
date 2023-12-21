@@ -57,7 +57,7 @@ class Square:
 
     def __repr__(self):
         if self.__size == 0:
-            return []
+            return "\n".join([])
         nest = [[] if (i < self.__position[1]) else
                 [
                     " " if (j < self.__position[0]) else "#"
