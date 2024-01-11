@@ -33,3 +33,19 @@ TypeError: integer_validator() missing 2 required positional arguments: 'name' a
 Traceback (most recent call last):
 ...
 TypeError: height must be an integer
+>>> bg.integer_validator("height", [4])
+Traceback (most recent call last):
+...
+TypeError: height must be an integer
+>>> bg.integer_validator("height", {4, 2})
+Traceback (most recent call last):
+...
+TypeError: height must be an integer
+>>> bg.integer_validator("height", True)
+Traceback (most recent call last):
+...
+TypeError: height must be an integer
+>>> bg.integer_validator("height", None)
+Traceback (most recent call last):
+...
+TypeError: height must be an integer
