@@ -53,7 +53,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_string(self):
         """string argument passed to the list parameter"""
-        self.assertEqual(max_integer("oesophagus"), 's')
+        self.assertEqual(max_integer("oesophagus"), 'u')
 
     def test_type_error(self):
         """mixed data type list passed to the list parameter"""
