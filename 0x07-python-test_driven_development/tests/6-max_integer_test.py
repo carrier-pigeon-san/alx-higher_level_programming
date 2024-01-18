@@ -7,6 +7,7 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
+
 class TestMaxInteger(unittest.TestCase):
     """unittest class for max_integer() function test cases"""
 
@@ -32,7 +33,8 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_neg_float_list(self):
         """list parameter comprises negative floating point numbers only"""
-        self.assertEqual(max_integer([-2.73, -2.45, -2.12, -2.88, -2.36]), -2.12)
+        self.assertEqual(max_integer(
+            [-2.73, -2.45, -2.12, -2.88, -2.36]), -2.12)
 
     def test_int_float_list(self):
         """
@@ -46,7 +48,8 @@ class TestMaxInteger(unittest.TestCase):
             list parameter comprises positive and negative integers and
             floating point numbers
         """
-        self.assertEqual(max_integer([-2.45, 1, 0.92, -1, 2.64, -2, 1.35, -2.88, 0, -1.79]), 2.64)
+        self.assertEqual(max_integer(
+            [-2.45, 1, 0.92, -1, 2.64, -2, 1.35, -2.88, 0, -1.79]), 2.64)
 
     def test_string(self):
         """string argument passed to the list parameter"""
@@ -55,5 +58,3 @@ class TestMaxInteger(unittest.TestCase):
     def test_type_error(self):
         """mixed data type list passed to the list parameter"""
         self.assertRaises(TypeError, max_integer, [3, "bee"])
-
-
