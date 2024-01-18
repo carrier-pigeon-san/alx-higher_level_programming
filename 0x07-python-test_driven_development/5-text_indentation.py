@@ -12,11 +12,7 @@ def text_indentation(text):
 
     if type(text) is not str:
         raise TypeError('text must be a string')
-    for char in range(len(text)):
-        if text[char] in ('.', '?', ':'):
-            print(text[char])
-            print()
-        elif text[char - 1] in ('.', '?', ':') and text[char] == ' ':
-            continue
-        else:
-            print(text[char], end="")
+    for chars in '.:?':
+        text = (chars + '\n\n').join(
+                [substr.strip(" ") for substr in text.split(chars)])
+    print(text, end="")
