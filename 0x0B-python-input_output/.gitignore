@@ -1,5 +1,8 @@
 # Ignore files:
 main.py
-my_file_0.txt
-my_first_file.txt
-file_append.txt
+
+# Ignore .txt files
+*.txt
+
+# Ignore JSON files
+*.json
