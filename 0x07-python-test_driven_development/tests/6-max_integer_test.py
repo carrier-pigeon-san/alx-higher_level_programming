@@ -51,6 +51,10 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(
             [-2.45, 1, 0.92, -1, 2.64, -2, 1.35, -2.88, 0, -1.79]), 2.64)
 
+    def test_single_item_list(self):
+        """list argument with single element passed to list parameter"""
+        self.assertEqual(max_integer([4]), 4)
+
     def test_string(self):
         """string argument passed to the list parameter"""
         self.assertEqual(max_integer("oesophagus"), 'u')
