@@ -3,5 +3,5 @@
 -- Results sortes in ascending order by cities.id
 SELECT id, cities.name, states.name
 FROM cities
-  JOIN states
+  INNER JOIN states
     ON cities.state_id = states.id ORDER BY id ASC;
