@@ -6,4 +6,4 @@ FROM tv_shows ts
 JOIN (tv_show_genres tsg, tv_genres tg)
 ON (ts.id = tsg.show_id AND tsg.genre_id = tg.id)
 WHERE tg.name = 'Comedy'
-ORDER BY title ASC
+ORDER BY title ASC;
