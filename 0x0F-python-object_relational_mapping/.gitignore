@@ -1,0 +1,4 @@
+# Ignore files:
+0-select_states.py
+# Ignore directories:
+venv/
