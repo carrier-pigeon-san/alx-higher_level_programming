@@ -13,7 +13,7 @@ if (argv.length === 2 || argv.length === 3) {
   });
 
   argv.slice(2).forEach(element => {
-    if (parseInt(element) !== largest && parseInt(element) > second) {
+    if (parseInt(element) < largest && parseInt(element) > second) {
       second = parseInt(element);
     }
   });
