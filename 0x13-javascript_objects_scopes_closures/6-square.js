@@ -1,8 +1,8 @@
 #!/usr/bin/node
 const { stdout } = require('process');
-const Rectangle = require('./4-rectangle.js');
+const Square1 = require('./5-square.js');
 
-class Square extends Rectangle {
+class Square extends Square1 {
   constructor (size) {
     super(size, size);
   }
