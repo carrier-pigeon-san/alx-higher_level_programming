@@ -11,8 +11,8 @@ if __name__ == "__main__":
                          database=argv[3], port=3306)
     cur = db.cursor()
 
-    cur.execute(f"SELECT id, name FROM states\
-                WHERE name = '{argv[4]}' ORDER BY id ASC")
+    cur.execute("SELECT id, name FROM states\
+                WHERE name = '{}' ORDER BY id ASC".format(argv[4]))
     rows = cur.fetchall()
     for row in rows:
         print(row)
