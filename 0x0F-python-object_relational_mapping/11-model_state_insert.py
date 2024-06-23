@@ -27,4 +27,4 @@ if __name__ == '__main__':
     session.commit()
     query = session.query(State).order_by(State.id)
     for s in query:
-        print("{}: {}".format(s.id, s.name))
+        print("{}".format(s.id))
