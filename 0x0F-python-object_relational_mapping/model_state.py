@@ -11,7 +11,10 @@ Base = declarative_base():
     maximum 128 characters and can’t be null
 """
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, String, Integer
+from sqlalchemy import create_engine, Column, String, Integer
+
+engine = create_engine(
+    'mysql+mysqldb://root:DyN45Ty!@localhost:3306/hbtn_0e_6_usa')
 
 Base = declarative_base()
 
@@ -22,3 +25,6 @@ class State(Base):
     id = Column(Integer(), primary_key=True, autoincrement=True,
                 nullable=False)
     name = Column(String(128), nullable=False)
+
+
+Base.metadata.create_all(engine)
