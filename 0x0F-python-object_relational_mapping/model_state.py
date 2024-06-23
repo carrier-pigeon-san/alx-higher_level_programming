@@ -13,8 +13,10 @@ Base = declarative_base():
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine, MetaData, Table, Column, String, Integer
 
+"""
 engine = create_engine(
     'mysql+mysqldb://root:root@localhost:3306/hbtn_0e_6_usa')
+"""
 
 Base = declarative_base()
 
@@ -37,4 +39,4 @@ class State(Base):
     name = Column(String(128), nullable=False)
 
 
-Base.metadata.create_all(engine)
+# Base.metadata.create_all(engine)
