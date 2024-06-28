@@ -24,3 +24,5 @@ if __name__ == '__main__':
     query = session.query(State).first()
     if query:
         print("{}: {}".format(query.id, query.name))
+    else:
+        print("Nothing")
