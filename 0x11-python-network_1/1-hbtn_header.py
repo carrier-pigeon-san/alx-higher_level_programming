@@ -5,10 +5,11 @@ header of the response"""
 from sys import argv
 from urllib.request import Request, urlopen
 
-link = argv[1]
-http = Request(link)
+if __name__ == '__main__':
+    link = argv[1]
+    http = Request(link)
 
-with urlopen(http) as response:
-    header = response.info()
+    with urlopen(http) as response:
+        header = response.info()
 
-print(header.get('X-Request-Id'))
+    print(header.get('X-Request-Id'))
