@@ -11,4 +11,4 @@ http = Request(link)
 with urlopen(http) as response:
     header = response.info()
 
-print(header['X-Request-id'])
+print(header.get('X-Request-Id'))
