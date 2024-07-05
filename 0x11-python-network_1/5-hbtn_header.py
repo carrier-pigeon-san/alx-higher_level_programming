@@ -8,4 +8,4 @@ import requests
 if __name__ == '__main__':
     link = argv[1]
     r = requests.get(link)
-    print(r.headers['X-Request-Id'])
+    print(r.headers.get('X-Request-Id'))
