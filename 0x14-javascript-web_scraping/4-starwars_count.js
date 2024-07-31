@@ -2,7 +2,6 @@
 const process = require('node:process');
 const args = process.argv;
 const request = require('request');
-const apiPerson = 'https://swapi-api.alx-tools.com/api/people/18/';
 
 request.get(args[2], (error, response, body) => {
   if (error) {
@@ -18,7 +17,7 @@ request.get(args[2], (error, response, body) => {
     const films = JSON.parse(body);
     films.results.forEach(element => {
       element.characters.forEach(person => {
-        if (person === apiPerson) {
+        if (person.split('/').includes('18')) {
           occurence += 1;
         }
       });
