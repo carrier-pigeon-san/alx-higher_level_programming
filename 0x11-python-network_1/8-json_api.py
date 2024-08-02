@@ -3,6 +3,7 @@
 request to `http://0.0.0.0:5000/search_user` with the letter as a parameter"""
 from sys import argv
 import requests
+from requests import exceptions
 
 if __name__ == '__main__':
     link = 'http://0.0.0.0:5000/search_user'
@@ -10,7 +11,7 @@ if __name__ == '__main__':
     r = requests.post(link, data={'q': q})
     try:
         j = r.json()
-    except requests.exceptions.JSONDecodeError:
+    except exceptions.JSONDecodeError:
         print("Not a valid JSON")
     else:
         if j:
