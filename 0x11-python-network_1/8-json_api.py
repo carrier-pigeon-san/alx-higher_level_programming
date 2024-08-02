@@ -11,7 +11,7 @@ if __name__ == '__main__':
     r = requests.post(link, data={'q': q})
     try:
         j = r.json()
-    except exceptions.JSONDecodeError:
+    except requests.exceptions.InvalidJSONError:
         print("Not a valid JSON")
     else:
         if j:
